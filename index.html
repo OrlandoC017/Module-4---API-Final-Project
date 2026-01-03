@@ -15,7 +15,16 @@
                 <h1 class="logo">Movie Database</h1>
             </figure>
 
-                    <div class="search__wrapper">
+            <div class="search__wrapper">
+                <select class="filter__sort" id="filter">
+                    <option value="" disabled selected>Sort</option>
+                    <option value="NEWEST_FIRST">Newest First</option>
+                    <option value="OLDEST_FIRST">Oldest First</option>
+                    <option value="A_TO_Z">A to Z</option>
+                    <option value="Z_TO_A">Z to A</option>
+                </select>
+
+        
             <form class="form">
                 <button>
                     <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
@@ -45,6 +54,9 @@
         
         
     </section>
+
+
+    
     
     <section class="results">
         <div class="movie__profile">
@@ -54,63 +66,13 @@
             <h2 class="movie__title">The Avengers</h2>
             <h3 class="movie__year">Theatrical Release: 2012</h3>
             <h3 class="movie__type">Movie</h3>
-            <button class="movie__imdb click">IMDB</button>
-        </div>
-        <div class="movie__profile">
-            <figure class="movie__poster--wrapper">
-                <img src="https://m.media-amazon.com/images/M/MV5BNGE0YTVjNzUtNzJjOS00NGNlLTgxMzctZTY4YTE1Y2Y1ZTU4XkEyXkFqcGc@._V1_SX300.jpg" alt="" class="movie__poster--img">
-            </figure>
-            <h2 class="movie__title">The Avengers</h2>
-            <h3 class="movie__year">Theatrical Release: 2012</h3>
-            <h3 class="movie__type">Movie</h3>
-            <button class="movie__imdb">IMDB Link</button>
-        </div>
-        <div class="movie__profile">
-            <figure class="movie__poster--wrapper">
-                <img src="https://m.media-amazon.com/images/M/MV5BNGE0YTVjNzUtNzJjOS00NGNlLTgxMzctZTY4YTE1Y2Y1ZTU4XkEyXkFqcGc@._V1_SX300.jpg" alt="" class="movie__poster--img">
-            </figure>
-            <h2 class="movie__title">The Avengers</h2>
-            <h3 class="movie__year">Theatrical Release: 2012</h3>
-            <h3 class="movie__type">Movie</h3>
-            <button class="movie__imdb">IMDB Link</button>
-        </div>
-        <div class="movie__profile">
-            <figure class="movie__poster--wrapper">
-                <img src="https://m.media-amazon.com/images/M/MV5BNGE0YTVjNzUtNzJjOS00NGNlLTgxMzctZTY4YTE1Y2Y1ZTU4XkEyXkFqcGc@._V1_SX300.jpg" alt="" class="movie__poster--img">
-            </figure>
-            <h2 class="movie__title">The Avengers</h2>
-            <h3 class="movie__year">Theatrical Release: 2012</h3>
-            <h3 class="movie__type">Movie</h3>
-            <button class="movie__imdb">IMDB Link</button>
-        </div>
-        <div class="movie__profile">
-            <figure class="movie__poster--wrapper">
-                <img src="https://m.media-amazon.com/images/M/MV5BNGE0YTVjNzUtNzJjOS00NGNlLTgxMzctZTY4YTE1Y2Y1ZTU4XkEyXkFqcGc@._V1_SX300.jpg" alt="" class="movie__poster--img">
-            </figure>
-            <h2 class="movie__title">The Avengers</h2>
-            <h3 class="movie__year">Theatrical Release: 2012</h3>
-            <h3 class="movie__type">Movie</h3>
-            <button class="movie__imdb">IMDB Link</button>
-        </div>
-        <div class="movie__profile">
-            <figure class="movie__poster--wrapper">
-                <img src="https://m.media-amazon.com/images/M/MV5BNGE0YTVjNzUtNzJjOS00NGNlLTgxMzctZTY4YTE1Y2Y1ZTU4XkEyXkFqcGc@._V1_SX300.jpg" alt="" class="movie__poster--img">
-            </figure>
-            <h2 class="movie__title">The Avengers</h2>
-            <h3 class="movie__year">Theatrical Release: 2012</h3>
-            <h3 class="movie__type">Movie</h3>
-            <button class="movie__imdb">IMDB Link</button>
-        </div>
-        <div class="movie__profile">
-            <figure class="movie__poster--wrapper">
-                <img src="https://m.media-amazon.com/images/M/MV5BNGE0YTVjNzUtNzJjOS00NGNlLTgxMzctZTY4YTE1Y2Y1ZTU4XkEyXkFqcGc@._V1_SX300.jpg" alt="" class="movie__poster--img">
-            </figure>
-            <h2 class="movie__title">The Avengers</h2>
-            <h3 class="movie__year">Theatrical Release: 2012</h3>
-            <h3 class="movie__type">Movie</h3>
-            <button class="movie__imdb">IMDB Link</button>
+            <a href="https://www.imdb.com/title/tt0848228/" target="_blank" class="movie__imdb click">IMDB</a>
         </div>
     </section>
+
+    <footer>
+
+    </footer>
 
 </body>
 </html>
