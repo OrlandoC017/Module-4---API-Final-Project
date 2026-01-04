@@ -228,5 +228,9 @@ input:not(:placeholder-shown) ~ .reset {
     margin: 45px;
 }
 
+.button__wrapper {
+    margin-top: 15px;
+}
+
 /* Footer */
 
