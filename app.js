@@ -19,10 +19,10 @@ async function onSearchChange() {
             moviesData.Search.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
         } else if (sortValue === 'OLDEST_FIRST') {
             moviesData.Search.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
-        } else if (sortValue === 'A_Z') {
-            moviesData.Search.sort((a, b) => a.Title.localeCompare(b.Title));
-        } else if (sortValue === 'Z_A') {
-            moviesData.Search.sort((a, b) => b.Title.localeCompare(a.Title));
+        } else if (sortValue === 'A_TO_Z') {
+            moviesData.Search.sort((a, b) => (a.Title || '').localeCompare(b.Title || ''));
+        } else if (sortValue === 'Z_TO_A') {
+            moviesData.Search.sort((a, b) => (b.Title || '').localeCompare(a.Title || ''));
         }
     }
 
