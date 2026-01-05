@@ -202,7 +202,7 @@ input:not(:placeholder-shown) ~ .reset {
     height: 350px;
 }
 
-.results {
+.movie-list {
     display: flex;
     text-align: center;
     justify-content: center;

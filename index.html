@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 4 - Final Project</title>
-    <script src = "app.js"></script>
+    <script src = "app.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,7 +32,7 @@
                     </svg>
                 </button>
                 <input class="input" placeholder="Search Movies" required="" type="text" onchange="onSearchChange(event)">
-                <button class="reset" type="reset">
+                <button class="reset" type="search">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -68,7 +68,7 @@
                     <h2 class="movie__title">Movie Title</h2>
                     <h3 class="movie__year">Theatrical Release: 2026</h3>
                     <h3 class="movie__type">Movie</h3>
-                    <form action="https://www.imdb.com/title/tt0848228/" target="_blank">
+                    <form action="https://www.imdb.com/title/tt0848228/?" target="_blank">
                         <input class ="movie__imdb click"  type="submit" value="IMDB" />
                     </form>
                 </div>
