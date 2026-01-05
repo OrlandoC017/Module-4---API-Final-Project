@@ -42,6 +42,8 @@ p {
     padding: 15px 25px;
     color: white;
     border-radius: 50px;
+    width: 285px;
+    text-align: center;
 }
 
 #landing {
@@ -187,7 +189,7 @@ input:not(:placeholder-shown) ~ .reset {
 
 .filter__sort {
      height: 50px;
-     width: 125px;
+     width: 165px;
      height: 50px;
      border-radius: 50px;
      font-weight: 600;
@@ -197,6 +199,14 @@ input:not(:placeholder-shown) ~ .reset {
 
 /*results*/
 
+.results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
 .movie__poster--img {
     width: 250px;
     height: 350px;
@@ -205,7 +215,7 @@ input:not(:placeholder-shown) ~ .reset {
 .movie-list {
     display: flex;
     text-align: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 50px 25px;
     flex-wrap: wrap;
     width: 100%;
@@ -226,6 +236,7 @@ input:not(:placeholder-shown) ~ .reset {
 
 .movie__profile {
     margin: 45px;
+    width: 250px;
 }
 
 .button__wrapper {
@@ -234,3 +245,25 @@ input:not(:placeholder-shown) ~ .reset {
 
 /* Footer */
 
+.footer {
+    position: static;
+    left:0;
+    bottom:0;
+    width: 100%;
+    background-color: #111010;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.footer__copyright {
+    font-size: 14px;
+    color: #bbbbbb;
+    margin-top: 25px;
+}
