@@ -6,7 +6,7 @@ async function onSearchChange(event) {
     const movies = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=2d9420f2&s=${searchTerm}`)
     const moviesData = await movies.json();
     const movie = event.target.value
-    console.log(event.target.value)
+    console.log(searchTerm)
 
     moviesListEl.innerHTML = moviesData.Search.map((movie) =>
          `<div class="movie__profile">
