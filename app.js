@@ -1,20 +1,33 @@
 // https://www.omdbapi.com/?i=tt3896198&apikey=2d9420f2&s={search word}
 const moviesListEl = document.querySelector(".movie-list");
 
-async function onSearchChange(event) {
+async function onSearchChange() {
     const searchTerm = document.querySelector('.input').value;
+    
+    if (!searchTerm) {
+        moviesListEl.innterHTML = '';
+        return;
+    }
+
     const movies = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=2d9420f2&s=${searchTerm}`)
     const moviesData = await movies.json();
     
-    if (event.target.value === "NEWEST_FIRST") {
-        moviesData.Search.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
-    } else if (event.target.value === "OLDEST_FIRST") {
-        moviesData.Search.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
-    } else if (event.target.value === "A_TO_Z") {
-        moviesData.Search.sort((a, b) => a.Title.localeCompare(b.Title));
-    } else if (event.target.value === "Z_TO_A") {
-        moviesData.Search.sort((a, b) => b.Title.localeCompare(a.Title));
+    const sortValue = document.querySelector('.filter__sort')?.value || '';
+
+    if (moviesData.Search && Array.isArray(moviesData.Search)) {
+        if (sortValue === 'NEWEST_FIRST') {
+            moviesData.Search.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
+        } else if (sortValue === 'OLDEST_FIRST') {
+            moviesData.Search.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
+        } else if (sortValue === 'A_Z') {
+            moviesData.Search.sort((a, b) => a.Title.localeCompare(b.Title));
+        } else if (sortValue === 'Z_A') {
+            moviesData.Search.sort((a, b) => b.Title.localeCompare(a.Title));
+        }
     }
+
+
+
 
     if (moviesData.Search) {
         moviesListEl.innerHTML = moviesData.Search.map((movie) => {
@@ -45,6 +58,6 @@ async function onSearchChange(event) {
 
 
 function filterMedia(event) {
-    onSearchChange(event.target.value)
+    onSearchChange();
 
 }
